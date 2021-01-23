@@ -1,7 +1,10 @@
-#!/bin/bash
+#!/bin/bash/
 
-if [ "$(uname -s)" == "OpenBSD" ]; then
-	echo "This works"
-elif [ "$(expr substr $(uname -s) 1 5)" == NetBSD ]; then
-	echo "This is NetBSD"
+if [ $(uname -s) = "OpenBSD" ]; then
+	echo "OpenBSD"
+elif [ $(uname -s) = "NetBSD" ]; then
+	echo "NetBSD"
+else
+	echo "OS is not supported"
+	exit 1
 fi
