@@ -74,4 +74,5 @@ elif
 	exit 1
 fi
 
-echo "Move in completed. Enjoy!"
+echo "Move in completed. Shell will exit to record changes."
+exit
