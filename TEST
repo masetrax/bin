@@ -1,0 +1,7 @@
+#!/bin/bash
+
+if [ "$(uname -s)" == "OpenBSD" ]; then
+	echo "This works"
+elif [ "$(expr substr $(uname -s) 1 5)" == NetBSD ]; then
+	echo "This is NetBSD"
+fi
