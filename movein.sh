@@ -26,7 +26,7 @@ echo "Complete"
 
 # INSTALL PACKAGES
 echo "Running Package Manager"
-doas pkg_add -L ~/DOTS/PAckages.txt
+doas pkg_add -l ~/dots/packages.txt
 echo "Packages Installed"
 
 # SET DEFAULTS
@@ -43,11 +43,6 @@ cp cwmrc ~/.cwmrc
 mkdir ~/.config
 mkdir ~/.config/sdorfehs
 cp config.conf ~/.config/sdorfehs/
-
-# SET XENOCARA DEFAULT
-#touch .xsession
-#	echo "xsetroot -solid "#F3F6E3"" >> ~/.xsession
-#	echo "exec sowm" >> ~/.xsession
 
 # CLEAN UP
 mv ~/bin ~/.bin
