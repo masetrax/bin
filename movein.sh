@@ -1,5 +1,6 @@
 # REMOVE DEFAULT OPENBSD
 echo "Removing defaults"
+cd ~/
 rm -rf	~/.cshrc \
 	~/.logic \
 	~/.mailrc \
@@ -22,6 +23,7 @@ git clone https://github.com/dylanaraps/pfetch
 git clone https://github.com/jcs/sdorfehs
 git clone https://git.suckless.org/st
 git clone https://git.suckless.org/dwm
+cd ~/
 echo "Complete"
 
 # INSTALL PACKAGES
@@ -42,7 +44,7 @@ cp profile ~/.profile
 cp cwmrc ~/.cwmrc
 mkdir ~/.config
 mkdir ~/.config/sdorfehs
-cp config.conf ~/.config/sdorfehs/
+cp config ~/.config/sdorfehs/config
 
 # CLEAN UP
 mv ~/bin ~/.bin
