@@ -3,7 +3,7 @@ echo "Removing defaults"
 cd ~/
 rm -rf	~/.cshrc \
 	~.shrc \
-	~/.logic \
+	~/.login \
 	~/.mailrc \
 	~/.profile \
 	~/.Xdefaults \
