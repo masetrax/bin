@@ -2,6 +2,7 @@
 echo "Removing defaults"
 cd ~/
 rm -rf	~/.cshrc \
+	~.shrc \
 	~/.logic \
 	~/.mailrc \
 	~/.profile \
@@ -19,6 +20,7 @@ echo "Complete"
 echo "Cloning Repositories"
 # COPY WM SPECIFIC REPOSITORIES
 mkdir ~/.repos
+cd ~/.repos
 git clone https://github.com/dylanaraps/sowm
 git clone https://github.com/dylanaraps/pfetch
 git clone https://github.com/jcs/sdorfehs
