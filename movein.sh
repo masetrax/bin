@@ -9,7 +9,7 @@ rm -rf	~/.cshrc \
 	~/.Xdefaults \
 	~/.cvsrc
 
-# COPY REPOSITORIES
+# COPY USER REPOSITORIES
 echo "Cloning User Repositories"
 git clone https://github.com/masetrax/dots
 git clone https://github.com/masetrax/img
@@ -17,8 +17,8 @@ git clone https://github.com/masetrax/docs
 git clone https://github.com/masetrax/etc
 echo "Complete"
 
+# CLONING PUBLIC REPOS
 echo "Cloning Repositories"
-# COPY WM SPECIFIC REPOSITORIES
 mkdir ~/.repos
 cd ~/.repos
 git clone https://github.com/dylanaraps/sowm
