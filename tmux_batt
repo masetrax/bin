@@ -1,0 +1,4 @@
+#!bin/bash
+battery=`apm -l`
+echo ${battery}%
+
