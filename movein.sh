@@ -58,7 +58,7 @@ if [ $(uname -s) = "NetBSD" ]; then
 	mkdir ~/.config/berry
 	cp autostart ~/.config/berry/autostart
 	cp sxhkdrc ~/.config/berry/sxhkdrc
-elif
+else
 	cp Xresources ~/.Xdefaults
 	cp xsession ~/.xsession
 	cp bashrc ~/.bashrc
