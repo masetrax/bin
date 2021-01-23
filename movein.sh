@@ -47,12 +47,15 @@ if [ $(uname -s) = "NetBSD" ]; then
 	cp xsession ~/.xinitrc
 	cp bashrc ~/.bashrc
 	cp vimrc ~/.vimrc
-	cp tmux.conf ~/tmux.conf
+	cp tmux.conf ~/.tmux.conf
 	cp ctwmrc ~/.ctwmrc
 	cp rtorrent.rc ~/.rtorrent.rc
 	cp dunstrc ~/.dunstrc
 	cp profile ~/.profile
-else
+	mkdir ~/.config
+	mkdir ~/.config/sdorfehs
+	cp config ~/.config/sdorfehs/config
+elif
 	cp Xresources ~/.Xdefaults
 	cp xsession ~/.xsession
 	cp bashrc ~/.bashrc
