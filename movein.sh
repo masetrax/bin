@@ -12,6 +12,7 @@ rm -rf	~/.cshrc \
 echo "Cloning User Repositories"
 git clone https://github.com/masetrax/dots
 git clone https://github.com/masetrax/img
+git clone https://github.com/masetrax/docs
 git clone https://github.com/masetrax/etc
 echo "Complete"
 
@@ -38,8 +39,8 @@ cp xsession ~/.xsession
 cp bashrc ~/.bashrc
 cp vimrc ~/.vimrc
 cp tmux.conf ~/.tmux.conf
-cp rtorrentrc ~/.rtorrentrc
-cp dunst ~/.dunstrc
+cp rtorrent.rc ~/.rtorrent.rc
+cp dunstrc ~/.dunstrc
 cp profile ~/.profile
 cp cwmrc ~/.cwmrc
 mkdir ~/.config
