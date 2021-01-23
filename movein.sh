@@ -23,29 +23,48 @@ git clone https://github.com/dylanaraps/sowm
 git clone https://github.com/dylanaraps/pfetch
 git clone https://github.com/jcs/sdorfehs
 git clone https://git.suckless.org/st
-git clone https://git.suckless.org/dwm
 cd ~/
 echo "Complete"
 
 # INSTALL PACKAGES
 echo "Running Package Manager"
-doas pkg_add -l ~/dots/packages.txt
+if [ $(uname -s) = "OpenBSD" ]; then
+	doas pkg_add -l ~/dots/packages-OpenBSD
+elif [ $(uname -s) = "NetBSD" ]; then
+	doas pkgin import ~/dots/packages-NetBSD
+else
+	echo "Configure packages manually"
+	exit 1
+fi
 echo "Packages Installed"
 
 # SET DEFAULTS
 cd ~/dots/
-cp Xresources ~/.Xdefaults
-cp xsession ~/.xsession
-cp bashrc ~/.bashrc
-cp vimrc ~/.vimrc
-cp tmux.conf ~/.tmux.conf
-cp rtorrent.rc ~/.rtorrent.rc
-cp dunstrc ~/.dunstrc
-cp profile ~/.profile
-cp cwmrc ~/.cwmrc
-mkdir ~/.config
-mkdir ~/.config/sdorfehs
-cp config ~/.config/sdorfehs/config
+if [ $(uname -s) = "NetBSD" ]; then
+	cp Xresources ~/.Xresources
+	cp xsession ~/.xinitrc
+	cp bashrc ~/.bashrc
+	cp vimrc ~/.vimrc
+	cp tmux.conf ~/tmux.conf
+	cp ctwmrc ~/.ctwmrc
+	cp rtorrent.rc ~/.rtorrent.rc
+	cp dunstrc ~/.dunstrc
+	cp profile ~/.profile
+else
+	cp Xresources ~/.Xdefaults
+	cp xsession ~/.xsession
+	cp bashrc ~/.bashrc
+	cp vimrc ~/.vimrc
+	cp tmux.conf ~/.tmux.conf
+	cp rtorrent.rc ~/.rtorrent.rc
+	cp dunstrc ~/.dunstrc
+	cp profile ~/.profile
+	cp cwmrc ~/.cwmrc
+	mkdir ~/.config
+	mkdir ~/.config/sdorfehs
+	cp config ~/.config/sdorfehs/config
+	exit 1
+fi
 
 # CLEAN UP
 mv ~/bin ~/.bin
