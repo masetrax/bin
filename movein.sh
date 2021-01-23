@@ -55,6 +55,9 @@ if [ $(uname -s) = "NetBSD" ]; then
 	mkdir ~/.config
 	mkdir ~/.config/sdorfehs
 	cp config ~/.config/sdorfehs/config
+	mkdir ~/.config/berry
+	cp autostart ~/.config/berry/autostart
+	cp sxhkdrc ~/.config/berry/sxhkdrc
 elif
 	cp Xresources ~/.Xdefaults
 	cp xsession ~/.xsession
@@ -71,6 +74,4 @@ elif
 	exit 1
 fi
 
-# CLEAN UP
-mv ~/bin ~/.bin
-mv ~/dots ~/.dots
+echo "Move in completed. Enjoy!"
