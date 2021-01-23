@@ -30,35 +30,11 @@ echo "Complete"
 
 # INSTALL PACKAGES
 echo "Running Package Manager"
-if [ $(uname -s) = "OpenBSD" ]; then
-	doas pkg_add -l ~/dots/packages_OpenBSD
-elif [ $(uname -s) = "NetBSD" ]; then
-	doas pkgin import ~/dots/packages_NetBSD
-else
-	echo "Configure packages manually"
-	exit 1
-fi
+doas pkg_add -l ~/dots/packages_OpenBSD
 echo "Packages Installed"
 
 # SET DEFAULTS
 cd ~/dots/
-if [ $(uname -s) = "NetBSD" ]; then
-	cp Xresources ~/.Xresources
-	cp xsession ~/.xinitrc
-	cp bashrc ~/.bashrc
-	cp vimrc ~/.vimrc
-	cp tmux.conf ~/.tmux.conf
-	cp ctwmrc ~/.ctwmrc
-	cp rtorrent.rc ~/.rtorrent.rc
-	cp dunstrc ~/.dunstrc
-	cp profile ~/.profile
-	mkdir ~/.config
-	mkdir ~/.config/sdorfehs
-	cp config ~/.config/sdorfehs/config
-	mkdir ~/.config/berry
-	cp autostart ~/.config/berry/autostart
-	cp sxhkdrc ~/.config/berry/sxhkdrc
-else
 	cp Xresources ~/.Xdefaults
 	cp xsession ~/.xsession
 	cp bashrc ~/.bashrc
@@ -71,8 +47,6 @@ else
 	mkdir ~/.config
 	mkdir ~/.config/sdorfehs
 	cp config ~/.config/sdorfehs/config
-	exit 1
-fi
 
 echo "Move in completed. Shell will exit to record changes."
 exit
