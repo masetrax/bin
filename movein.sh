@@ -29,9 +29,9 @@ echo "Complete"
 # INSTALL PACKAGES
 echo "Running Package Manager"
 if [ $(uname -s) = "OpenBSD" ]; then
-	doas pkg_add -l ~/dots/packages-OpenBSD
+	doas pkg_add -l ~/dots/packages_OpenBSD
 elif [ $(uname -s) = "NetBSD" ]; then
-	doas pkgin import ~/dots/packages-NetBSD
+	doas pkgin import ~/dots/packages_NetBSD
 else
 	echo "Configure packages manually"
 	exit 1
