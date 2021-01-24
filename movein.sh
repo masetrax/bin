@@ -24,12 +24,6 @@ cd ~/.repos
 git clone https://github.com/dylanaraps/sowm
 git clone https://github.com/dylanaraps/pfetch
 git clone https://github.com/jcs/sdorfehs
-git clone https://git.suckless.org/st
-git clone https://git.suckless.org/dwm
-git clone https://git.suckless.org/dmenu
-git clone https://git.suckless.org/ii
-git clone https://git.suckless.org/surf
-git clone https://git.suckless.org/tabbed
 cd ~/
 echo "Complete"
 
