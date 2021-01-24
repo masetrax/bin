@@ -23,7 +23,6 @@ mkdir ~/.repos
 cd ~/.repos
 git clone https://github.com/dylanaraps/sowm
 git clone https://github.com/dylanaraps/pfetch
-git clone https://github.com/jcs/sdorfehs
 cd ~/
 echo "Complete"
 
@@ -43,9 +42,6 @@ cd ~/dots/
 	cp dunstrc ~/.dunstrc
 	cp profile ~/.profile
 	cp cwmrc ~/.cwmrc
-	mkdir ~/.config
-	mkdir ~/.config/sdorfehs
-	cp config ~/.config/sdorfehs/config
 
 echo "Move in completed. Shell will exit to record changes."
 exit
