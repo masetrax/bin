@@ -1,0 +1,6 @@
+#!bin/bash
+
+DateLine(){
+	currentdate=$(date "+%a %b %d")
+	echo $currentdate
+}
