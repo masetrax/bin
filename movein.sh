@@ -2,7 +2,7 @@
 echo "Removing defaults"
 cd ~/
 rm -rf	~/.cshrc \
-	~.shrc \
+	~/.shrc \
 	~/.login \
 	~/.mailrc \
 	~/.profile \
@@ -15,6 +15,7 @@ git clone https://github.com/masetrax/dots
 git clone https://github.com/masetrax/img
 git clone https://github.com/masetrax/docs
 git clone https://github.com/masetrax/etc
+git clone https://github.com/masetrax/colours
 echo "Complete"
 
 # CLONING PUBLIC REPOS
@@ -45,6 +46,8 @@ cd ~/dots/
 	cp dunstrc ~/.dunstrc
 	cp profile ~/.profile
 	cp cwmrc ~/.cwmrc
+        cd
+	mv ~/colours ~/.colours
 
 # CHANGE TO BASH SHELL
 chsh -s bash

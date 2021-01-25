@@ -1,6 +1,0 @@
-#!bin/bash
-
-BatteryCharge(){
-	battery=`apm -l`
-	echo ${battery}%
-}
