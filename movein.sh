@@ -37,7 +37,7 @@ echo "Packages Installed"
 
 # SET DEFAULTS
 cd ~/dots/
-	cp Xresources ~/.Xdefaults
+	cp Xresources ~/.Xresources
 	cp xsession ~/.xsession
 	cp bashrc ~/.bashrc
 	cp vimrc ~/.vimrc
