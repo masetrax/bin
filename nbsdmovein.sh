@@ -26,9 +26,9 @@ cd
 echo "Complete"
 
 # INSTALL PACKAGES
-echo "Running Package Manager"
-doas pkgin import ~/dots/packages_NetBSD
-echo "Packages Installed"
+# echo "Running Package Manager"
+# doas pkgin import ~/dots/packages_NetBSD
+# echo "Packages Installed"
 
 # SET DEFAULTS
 cd ~/dots/
