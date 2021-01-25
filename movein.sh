@@ -47,7 +47,6 @@ cd ~/dots/
 	cp profile ~/.profile
 	cp cwmrc ~/.cwmrc
         cd
-	mv ~/colours ~/.colours
 
 # CHANGE TO BASH SHELL
 chsh -s bash
