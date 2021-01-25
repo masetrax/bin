@@ -4,10 +4,8 @@ cd ~/
 rm -rf	~/.cshrc \
 	~/.shrc \
 	~/.login \
-	~/.mailrc \
-	~/.profile \
-	~/.Xdefaults \
-	~/.cvsrc
+	~/.logout \
+	~/.profile
 
 # COPY USER REPOSITORIES
 echo "Cloning User Repositories"
