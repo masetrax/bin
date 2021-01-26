@@ -1,13 +1,12 @@
 # REMOVE DEFAULT OPENBSD
 echo "Removing defaults"
 cd ~/
-rm -rf	~/.cshrc \
-	~/.shrc \
+rm -rf	~/.Xdefaults
+	~/.cshrc \
+	~/.cvsrc \
 	~/.login \
 	~/.mailrc \
 	~/.profile \
-	~/.Xdefaults \
-	~/.cvsrc
 
 # COPY USER REPOSITORIES
 echo "Cloning User Repositories"
