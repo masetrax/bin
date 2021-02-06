@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 
 if [[ "$(uname)" == "Darwin" ]]; then
     cap="$(pmset -g batt | grep -Eo "\d+%" | cut -d% -f1)"

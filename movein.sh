@@ -1,3 +1,5 @@
+#!/bin/env sh
+
 # REMOVE DEFAULT OPENBSD
 echo "Removing defaults"
 cd ~/
