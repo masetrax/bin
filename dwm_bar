@@ -1,0 +1,42 @@
+#!/bin/sh
+
+FG='#F4F4F4'
+BG='#676767'
+FONT='monospace:size=10'
+WIDTH='352'
+HEIGHT='19'
+
+Clock(){
+	clk=$(date "+%H:%M")
+	echo $clk
+}
+
+Date(){
+	dte=$(date "+%a %b %d")
+	echo $dte
+}
+
+Volume(){
+	v=$(sndioctl -n output.level | awk '{print int ($0*100) '})
+	echo $v%
+}
+
+BattStat(){
+	battery=`apm -l`
+	battcharge=`apm -a`
+	if [ $battcharge -eq 1 ]; then
+		echo "ac:${battery}%"
+	elif [ $battery -eq 100 ]; then
+		echo "bat:/${battery}%"
+	elif [ $battery -le 25 ]; then
+		echo "bat:/${battery}%"
+	else
+		echo "bat:/${battery}%"
+	fi
+}
+
+
+while true; do
+	sleep 1
+	echo "$(Volume)    $(BattStat)    $(Date)    $(Clock)   " 
+done | dzen2 -p -fn $FONT -bg $BG -ta r  -fg $FG -w $WIDTH -h $HEIGHT -y 0 -x -353 -e 'button2=;'
