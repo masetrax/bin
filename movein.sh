@@ -38,15 +38,17 @@ echo "Packages Installed"
 
 # SET DEFAULTS
 cd ~/dots/
-	cp Xresources ~/.Xresources
-	cp xsession ~/.xsession
-	cp bashrc ~/.bashrc
-	cp vimrc ~/.vimrc
-	cp tmux.conf ~/.tmux.conf
-	cp rtorrent.rc ~/.rtorrent.rc
-	cp dunstrc ~/.dunstrc
-	cp profile ~/.profile
-	cp cwmrc ~/.cwmrc
+	cp .Xresources ~/.Xresources
+	cp .xsession ~/.xsession
+	cp .bashrc ~/.bashrc
+	cp .bash_aliases ~/.bash_aliases
+	cp .vimrc ~/.vimrc
+	cp .tmux.conf ~/.tmux.conf
+	cp .rtorrent.rc ~/.rtorrent.rc
+	cp .dunstrc ~/.dunstrc
+	cp .profile ~/.profile
+	cp .cwmrc ~/.cwmrc
+	cp. config/ ~/.config/
         cd
 
 # CHANGE TO BASH SHELL
@@ -54,4 +56,4 @@ chsh -s bash
 
 echo "Move in completed. Shell will exit to record changes."
 
-logout
+exit
